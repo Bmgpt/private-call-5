@@ -1,9 +1,9 @@
 import express from "npm:express";
-
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Welcome to the Dinosaur API!");
+app.get("/", function (req, res) {
+  res.send("Hello World");
 });
 
-app.listen(8000);
+app.listen(3000);
+console.log("listening on http://localhost:3000/");
