@@ -1,4 +1,7 @@
-import express from "npm:express";
+import { createRequire } from "https://deno.land/std/node/module.ts";
+
+const require = createRequire(import.meta.url);
+const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
