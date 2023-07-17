@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", function (req, res) {
     res.send(req.query.id)
-    //res.redirect("tel:124");
+    res.redirect("tel:"+req.query.id);
 });
 
 app.listen(3000);
