@@ -3,7 +3,11 @@ import express from "https://esm.sh/express@4.18.2";
 const app = express();
 
 app.get("/", function (req, res) {
-  res.redirect("tel:124");
+  if(req.query){
+    res.redirect("tel:124");
+  }else{
+    res.end("Invalid!")
+  }
 });
 
 app.listen(3000);
