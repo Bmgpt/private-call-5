@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", function (req, res) {
     if(req.query.number){
-      res.redirect("tel:%2331%23+"+req.query.number);
+      res.redirect("tel:*67+"+req.query.number);
     }else{
       res.send("Invalid")
     }
